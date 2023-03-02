@@ -8,8 +8,8 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "rm -rf ./dist && npx tsc",
-    "dev": "npx tsnd -r tsconfig-paths/register --ignore-watch node_modules ./src/index.ts | pino-pretty",
+    "build": "rm -rf ./dist && yarn install && npx tsc",
+    "dev": "tsnd -r tsconfig-paths/register --ignore-watch node_modules ./src/index.ts | pino-pretty",
     "start": "node -r tsconfig-paths/register ./dist/index.js"
   },
   "devDependencies": {
