@@ -5,7 +5,7 @@ export const logger: Logger = pino({
   level: config.get('LOG_LEVEL'),
   mixin: () => {
     return {
-      app: 'sample-app'
+      app: '{{service_name}}'
     }
   },
   formatters: {
