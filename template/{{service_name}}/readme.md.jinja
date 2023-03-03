@@ -11,6 +11,7 @@ docker build -t {{service_name}} .
 ## Developing
 To develop locally you can do this in a docker container
 ```
+docker run -it -v $PWD:/app {{service_name}} build
 docker run -it -p 3000:3000 -e NODE_ENV=development -v $PWD:/app {{service_name}} dev
 ```
 

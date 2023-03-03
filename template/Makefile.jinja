@@ -1,0 +1,11 @@
+
+define build
+        docker build -t {{service_name}} .
+endef
+
+build:
+        $(call build)
+
+build-dev:
+        $(call build) && \
+        docker run -it -v $${PWD}:/app {{service_name}} build
