@@ -9,3 +9,6 @@ build:
 build-dev:
 	$(call build) && \
 	docker run -it -v $${PWD}:/app {{service_name}} build
+
+start-dev:
+	docker run -it -p 3000:3000 -e NODE_ENV=development -v $${PWD}:/app {{service_name}} dev
