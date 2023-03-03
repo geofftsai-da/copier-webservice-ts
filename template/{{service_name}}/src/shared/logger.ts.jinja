@@ -7,5 +7,10 @@ export const logger: Logger = pino({
     return {
       app: '{{service_name}}'
     }
+  },
+  formatters: {
+    level: (label, number) => {
+      return { label, number }
+    },
   }
 })
