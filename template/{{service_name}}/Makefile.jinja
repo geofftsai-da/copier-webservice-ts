@@ -4,8 +4,8 @@ define build
 endef
 
 build:
-        $(call build)
+	$(call build)
 
 build-dev:
-        $(call build) && \
-        docker run -it -v $${PWD}:/app {{service_name}} build
+	$(call build) && \
+	docker run -it -v $${PWD}:/app {{service_name}} build
