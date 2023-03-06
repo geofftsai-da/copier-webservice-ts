@@ -12,7 +12,7 @@ service_author:
   help: Who is the author of the service?
   
 _subdirectory: template
-#_answers_file: ".project/{{service_name}}/.copier-answers.yml"
+_answers_file: ".project/{{service_name}}/.copier-answers.yml"
 
 
 # choices
