@@ -8,9 +8,4 @@ export const logger: Logger = pino({
       app: '{{service_name}}'
     }
   },
-  formatters: {
-    level: (label, number) => {
-      return { label, number }
-    }
-  },
 })
