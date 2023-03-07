@@ -3,12 +3,12 @@ define build
         docker build -t {{service_name}} .
 endef
 
-build:
+build: ## docker only build 
 	$(call build)
 
-build-dev:
+build-dev: ## build the docker in development mode, adding the node_modules toyour local folder
 	$(call build) && \
 	docker run -it -v $${PWD}:/app {{service_name}} build
 
-start-dev:
+start-dev: ## build the development container, and start the application in development mode
 	docker run -it -p 3000:3000 -e NODE_ENV=development -v $${PWD}:/app {{service_name}} dev
