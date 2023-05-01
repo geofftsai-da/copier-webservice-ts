@@ -1,0 +1,25 @@
+# .github/release.yml
+
+changelog:
+  exclude:
+    labels:
+      - ignore-for-release
+    authors:
+      - octocat
+  categories:
+    - title: Breaking Changes
+      labels:
+        - breaking-change
+    - title: Major Upgrades
+      labels: 
+        - upgrade
+        - major-revision
+    - title: New Features
+      labels:
+        - new-feature
+        - enhancement
+        - minor-revision
+    - title: Patches
+      labels:
+        - patch
+        - hotfix
